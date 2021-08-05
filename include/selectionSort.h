@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "./utils/utils.h"
+#include "./utils.h"
 
 void selectionSortOP(int **v, int size)
 {
