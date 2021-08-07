@@ -1,4 +1,4 @@
-void insetionSort(int *v, int size)
+void insertionSort(int *v, int size)
 {
     for (int i = 1; i < size; i++)
     {
