@@ -18,6 +18,16 @@ void populateArrayAscending(int *arr, int size)
     }
 }
 
+void populateArrayDescending(int *arr, int size)
+{
+    // cout << "A: " << size << endl;
+    for (int i = size - 1; i >= 0; i--)
+    {
+        //cout << "i: " << i << endl;
+        arr[i] = i;
+    }
+}
+
 void populateArrayRandom(int *arr, int size, int seed)
 {
     srand(seed);

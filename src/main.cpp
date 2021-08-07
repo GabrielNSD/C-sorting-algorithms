@@ -17,18 +17,17 @@ void testingFunction(int *arr, int size, void (*func)(int *, int), double *resul
 
     for (int i = 0; i < 30; i++)
     {
-        switch (testCase)
+        if (testCase == 1)
         {
-        case 1:
             populateArrayAscending(arr, size);
-            break;
-        case 2:
-            break;
-        case 3:
+        }
+        else if (testCase == 2)
+        {
+            populateArrayDescending(arr, size);
+        }
+        else if (testCase == 3)
+        {
             populateArrayRandom(arr, size, i);
-
-        default:
-            break;
         }
 
         //populateArrayRandom(arr, size, i);
@@ -47,7 +46,39 @@ void testingFunction(int *arr, int size, void (*func)(int *, int), double *resul
     }
 }
 
-void testRun(int size)
+void testingQuickSort(int *arr, int size, void (*func)(int *, int, int), double *resultArray, int testCase)
+{
+    for (int i = 0; i < 30; i++)
+    {
+        if (testCase == 1)
+        {
+            populateArrayAscending(arr, size);
+        }
+        else if (testCase == 2)
+        {
+            populateArrayDescending(arr, size);
+        }
+        else if (testCase == 3)
+        {
+            populateArrayRandom(arr, size, i);
+        }
+
+        //populateArrayRandom(arr, size, i);
+        double time_spent_TQS = 0.0;
+
+        clock_t begin_TQS = clock();
+
+        func(arr, 0, size - 1);
+
+        clock_t end_TQS = clock();
+
+        time_spent_TQS += (double)(end_TQS - begin_TQS) / CLOCKS_PER_SEC;
+
+        resultArray[i] = time_spent_TQS;
+    }
+}
+
+void testRun(int size, int testCase)
 {
     double resultsSelectionSortIP[30];
     double resultsBubbleSort[30];
@@ -58,7 +89,7 @@ void testRun(int size)
 
     int *ssip = (int *)calloc(size, sizeof(int));
 
-    testingFunction(ssip, size, &selectionSortIP, resultsSelectionSortIP, 1);
+    testingFunction(ssip, size, &selectionSortIP, resultsSelectionSortIP, testCase);
 
     free(ssip);
 
@@ -66,7 +97,7 @@ void testRun(int size)
 
     int *bbs = (int *)calloc(size, sizeof(int));
 
-    testingFunction(bbs, size, &bubbleSort, resultsBubbleSort, 1);
+    testingFunction(bbs, size, &bubbleSort, resultsBubbleSort, testCase);
 
     free(bbs);
 
@@ -74,7 +105,7 @@ void testRun(int size)
 
     int *is = (int *)calloc(size, sizeof(int));
 
-    testingFunction(is, size, &insertionSort, resultsInsertionSort, 1);
+    testingFunction(is, size, &insertionSort, resultsInsertionSort, testCase);
 
     free(is);
 
@@ -82,7 +113,7 @@ void testRun(int size)
 
     int *ms = (int *)calloc(size, sizeof(int));
 
-    testingFunction(ms, size, mergeSort, resultsMergeSort, 1);
+    testingFunction(ms, size, mergeSort, resultsMergeSort, testCase);
 
     free(ms);
 
@@ -92,7 +123,9 @@ void testRun(int size)
 
     int *qs = (int *)calloc(size, sizeof(int));
 
-    for (int i = 0; i < 30; i++)
+    testingQuickSort(qs, size, &quickSort, resultsQuickSort, testCase);
+
+    /* for (int i = 0; i < 30; i++)
     {
         populateArrayRandom(qs, size, i);
         double time_spent_QS = 0.0;
@@ -106,7 +139,7 @@ void testRun(int size)
         time_spent_QS += (double)(end_QS - begin_QS) / CLOCKS_PER_SEC;
 
         resultsQuickSort[i] = time_spent_QS;
-    }
+    } */
     free(qs);
 
     cout << "Media QS (tamanho " << size << "): " << meanTime(resultsQuickSort, 30) << endl;
@@ -116,6 +149,8 @@ void testRun(int size)
     //inicio quick sort random
     int *qsr = (int *)calloc(size, sizeof(int));
 
+    testingQuickSort(qsr, size, &quickSortRandom, resultsQuickSortRandom, testCase);
+    /* 
     for (int i = 0; i < 30; i++)
     {
         populateArrayRandom(qsr, size, i);
@@ -130,7 +165,7 @@ void testRun(int size)
         time_spent_QSR += (double)(end_QSR - begin_QSR) / CLOCKS_PER_SEC;
 
         resultsQuickSortRandom[i] = time_spent_QSR;
-    }
+    } */
     free(qsr);
 
     cout << "Media QSR (tamanho " << size << "): " << meanTime(resultsQuickSortRandom, 30) << endl
@@ -139,113 +174,25 @@ void testRun(int size)
 
 int main()
 {
-    testRun(10);
-    testRun(1000);
-    testRun(100000);
-    /* int size = 100000;
-    double resultsSelectionSortIP[30];
-    double resultsBubbleSort[30];
-    double resultsInsertionSort[30];
-    double resultsMergeSort[30];
-    double resultsQuickSort[30];
-    double resultsQuickSortRandom[30];
 
-    int *ssip = (int *)calloc(size, sizeof(int));
+    cout << "Testes com array ordenado: " << endl;
+    testRun(10, 1);
+    testRun(1000, 1);
+    testRun(100000, 1);
 
-    testingFunction(ssip, size, &selectionSortIP, resultsSelectionSortIP);
-
-    free(ssip);
-
-    cout << "media SSIP: " << meanTime(resultsSelectionSortIP, 30) << endl;
-
-    int *bbs = (int *)calloc(size, sizeof(int));
-
-    testingFunction(bbs, size, &bubbleSort, resultsBubbleSort);
-
-    free(bbs);
-
-    cout << "media BBS: " << meanTime(resultsBubbleSort, 30) << endl;
-
-    int *is = (int *)calloc(size, sizeof(int));
-
-    testingFunction(is, size, &insertionSort, resultsInsertionSort);
-
-    free(is);
-
-    cout << "media IS: " << meanTime(resultsInsertionSort, 30) << endl;
-
-    int *ms = (int *)calloc(size, sizeof(int));
-
-    testingFunction(ms, size, mergeSort, resultsMergeSort);
-
-    free(ms);
-
-    cout << "media MS: " << meanTime(resultsMergeSort, 30) << endl;
-
-    //inicio quick sort
-
-    int *qs = (int *)calloc(size, sizeof(int));
-
-    for (int i = 0; i < 30; i++)
-    {
-        double time_spent_QS = 0.0;
-
-        clock_t begin_QS = clock();
-
-        quickSort(qs, 0, size - 1);
-
-        clock_t end_QS = clock();
-
-        time_spent_QS += (double)(end_QS - begin_QS) / CLOCKS_PER_SEC;
-
-        resultsQuickSort[i] = time_spent_QS;
-    }
-    free(qs);
-
-    cout << "Media QS: " << meanTime(resultsQuickSort, 30) << endl;
-
-    //fim quick sort
-
-    //inicio quick sort random
-    int *qsr = (int *)calloc(size, sizeof(int));
-
-    for (int i = 0; i < 30; i++)
-    {
-        double time_spent_QSR = 0.0;
-
-        clock_t begin_QSR = clock();
-
-        quickSortRandom(qsr, 0, size - 1);
-
-        clock_t end_QSR = clock();
-
-        time_spent_QSR += (double)(end_QSR - begin_QSR) / CLOCKS_PER_SEC;
-
-        resultsQuickSortRandom[i] = time_spent_QSR;
-    }
-    free(qsr);
-
-    cout << "Media QSR: " << meanTime(resultsQuickSortRandom, 30) << endl;
-
-    //fim quick sort random
- */
-    /* cout << "[";
-    for (int i = 0; i < size; i++)
-    {
-
-        cout << original[i] << " ";
-    }
-    cout << "]";
     cout << endl;
-    cout << "[";
-    for (int i = 0; i < size; i++)
-    {
-        cout << qsr[i] << " ";
-    }
-    cout << "]"; */
 
-    /* for (int i = 0; i < 30; i++)
-    {
-        cout << resultsSelectionSortIP[i] << endl;
-    } */
+    cout << "Testes com array em ordem decrescente: " << endl;
+    testRun(10, 2);
+    testRun(1000, 2);
+    testRun(100000, 2);
+
+    cout << endl;
+
+    cout << "Testes com array aleatório: " << endl;
+    testRun(10, 3);
+    testRun(1000, 3);
+    testRun(100000, 3);
+
+    cout << endl;
 }
