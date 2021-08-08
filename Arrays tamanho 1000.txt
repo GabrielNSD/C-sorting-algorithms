@@ -1,16 +1,48 @@
-
-Media SSIP (tamanho 1000): 0.00101793
-Mediana SSIP (tamanho 1000): 0.000971
-Media BBS (tamanho 1000): 3.72333e-05
+Testes com array ordenado
+Media SSIP (tamanho 1000): 0.000971333
+Mediana SSIP (tamanho 1000): 0.0009675
+Media BBS (tamanho 1000): 3.72667e-05
 Mediana BBS (tamanho 1000): 2e-06
-Media IS (tamanho 1000): 2.56667e-06
+Media IS (tamanho 1000): 2.66667e-06
 Mediana IS (tamanho 1000): 3e-06
-Media MS (tamanho 1000): 6.09333e-05
-Mediana MS (tamanho 1000): 6.1e-05
-Media CS (tamanho 1000): 1.65333e-05
+Media MS (tamanho 1000): 6.08333e-05
+Mediana MS (tamanho 1000): 6e-05
+Media CS (tamanho 1000): 1.64e-05
 Mediana CS (tamanho 1000): 1.6e-05
-Media QS (tamanho 1000): 0.0020562
-Mediana QS (tamanho 1000): 0.0019985
-Media QSR (tamanho 1000): 4.80333e-05
-Mediana QSR (tamanho 1000): 4.75e-05
+Media QS (tamanho 1000): 0.00208587
+Mediana QS (tamanho 1000): 0.0019955
+Media QSR (tamanho 1000): 5.08667e-05
+Mediana QSR (tamanho 1000): 5.1e-05
+
+Testes com array em ordem decrescente
+Media SSIP (tamanho 1000): 0.000980467
+Mediana SSIP (tamanho 1000): 0.000981
+Media BBS (tamanho 1000): 0.00231933
+Mediana BBS (tamanho 1000): 0.002323
+Media IS (tamanho 1000): 0.000802933
+Mediana IS (tamanho 1000): 0.000803
+Media MS (tamanho 1000): 6.14667e-05
+Mediana MS (tamanho 1000): 6.1e-05
+Media CS (tamanho 1000): 1.76667e-05
+Mediana CS (tamanho 1000): 1.75e-05
+Media QS (tamanho 1000): 0.00127403
+Mediana QS (tamanho 1000): 0.001244
+Media QSR (tamanho 1000): 5.49e-05
+Mediana QSR (tamanho 1000): 5.4e-05
+
+Testes com array aleatório
+Media SSIP (tamanho 1000): 0.000988033
+Mediana SSIP (tamanho 1000): 0.000988
+Media BBS (tamanho 1000): 0.00175877
+Mediana BBS (tamanho 1000): 0.0017605
+Media IS (tamanho 1000): 0.0004086
+Mediana IS (tamanho 1000): 0.000408
+Media MS (tamanho 1000): 9.32667e-05
+Mediana MS (tamanho 1000): 9.3e-05
+Media CS (tamanho 1000): 1.23667e-05
+Mediana CS (tamanho 1000): 1.2e-05
+Media QS (tamanho 1000): 6.99333e-05
+Mediana QS (tamanho 1000): 6.95e-05
+Media QSR (tamanho 1000): 8.06667e-05
+Mediana QSR (tamanho 1000): 8.1e-05
 

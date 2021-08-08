@@ -1,16 +1,48 @@
-
-Media SSIP (tamanho 10): 2e-07
+Testes com array ordenado
+Media SSIP (tamanho 10): 2.66667e-07
 Mediana SSIP (tamanho 10): 0
-Media BBS (tamanho 10): 1.66667e-07
+Media BBS (tamanho 10): 6.66667e-08
 Mediana BBS (tamanho 10): 0
-Media IS (tamanho 10): 3.33333e-08
+Media IS (tamanho 10): 1e-07
 Mediana IS (tamanho 10): 0
-Media MS (tamanho 10): 4e-07
+Media MS (tamanho 10): 4.66667e-07
 Mediana MS (tamanho 10): 0
-Media CS (tamanho 10): 3.66667e-07
+Media CS (tamanho 10): 2.33333e-07
 Mediana CS (tamanho 10): 0
-Media QS (tamanho 10): 4e-07
+Media QS (tamanho 10): 3.66667e-07
 Mediana QS (tamanho 10): 0
-Media QSR (tamanho 10): 5e-07
-Mediana QSR (tamanho 10): 5e-07
+Media QSR (tamanho 10): 4.33333e-07
+Mediana QSR (tamanho 10): 0
+
+Testes com array em ordem decrescente
+Media SSIP (tamanho 10): 3e-07
+Mediana SSIP (tamanho 10): 0
+Media BBS (tamanho 10): 3.66667e-07
+Mediana BBS (tamanho 10): 0
+Media IS (tamanho 10): 2.33333e-07
+Mediana IS (tamanho 10): 0
+Media MS (tamanho 10): 4.66667e-07
+Mediana MS (tamanho 10): 0
+Media CS (tamanho 10): 3e-07
+Mediana CS (tamanho 10): 0
+Media QS (tamanho 10): 5e-07
+Mediana QS (tamanho 10): 5e-07
+Media QSR (tamanho 10): 5.33333e-07
+Mediana QSR (tamanho 10): 1e-06
+
+Testes com array aleatório
+Media SSIP (tamanho 10): 4.66667e-07
+Mediana SSIP (tamanho 10): 0
+Media BBS (tamanho 10): 5e-07
+Mediana BBS (tamanho 10): 5e-07
+Media IS (tamanho 10): 2.33333e-07
+Mediana IS (tamanho 10): 0
+Media MS (tamanho 10): 9e-07
+Mediana MS (tamanho 10): 1e-06
+Media CS (tamanho 10): 4.66667e-07
+Mediana CS (tamanho 10): 0
+Media QS (tamanho 10): 3.66667e-07
+Mediana QS (tamanho 10): 0
+Media QSR (tamanho 10): 4.66667e-07
+Mediana QSR (tamanho 10): 0
 

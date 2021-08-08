@@ -119,10 +119,24 @@ void testRun(int size, int testCase)
     double resultsQuickSortRandom[30];
 
     string fileName = "Arrays tamanho " + to_string(size) + ".txt";
+    string testName = "";
+
+    if (testCase == 1)
+    {
+        testName = "Testes com array ordenado";
+    }
+    else if (testCase == 2)
+    {
+        testName = "Testes com array em ordem decrescente";
+    }
+    else if (testCase == 3)
+    {
+        testName = "Testes com array aleatório";
+    }
 
     ofstream f;
-    f.open(fileName);
-    f << "\n";
+    f.open(fileName, std::ios::app);
+    f << testName << "\n";
 
     int *ssip = (int *)calloc(size, sizeof(int));
 
