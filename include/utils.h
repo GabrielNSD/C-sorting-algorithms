@@ -1,4 +1,7 @@
 #include <iostream>
+#include <stdlib.h>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -20,11 +23,10 @@ void populateArrayAscending(int *arr, int size)
 
 void populateArrayDescending(int *arr, int size)
 {
-    // cout << "A: " << size << endl;
-    for (int i = size - 1; i >= 0; i--)
+
+    for (int i = 0; i < size; i++)
     {
-        //cout << "i: " << i << endl;
-        arr[i] = i;
+        arr[i] = size - i - 1;
     }
 }
 
@@ -47,4 +49,20 @@ double meanTime(double *arr, int size)
     }
 
     return sum / size;
+}
+
+int compareDouble(const void *a, const void *b)
+{
+    if (*(double *)a < *(double *)b)
+        return -1;
+    if (*(double *)a == *(double *)b)
+        return 0;
+    if (*(double *)a > *(double *)b)
+        return 1;
+}
+
+double medianTime(double *arr, int size)
+{
+    qsort(arr, size, sizeof(double), compareDouble);
+    return (arr[14] + arr[15]) / 2;
 }

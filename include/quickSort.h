@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-int partition(int *v, int ini, int end)
+int partition(int *v, int beg, int end)
 {
-    int pIndex = ini;
+    int pIndex = beg;
     int pivot = v[end];
-    for (int i = ini; i < end; i++)
+    for (int i = beg; i < end; i++)
     {
         if (v[i] <= pivot)
         {
@@ -21,12 +21,38 @@ int partition(int *v, int ini, int end)
     return pIndex;
 }
 
-void quickSort(int *v, int ini, int end)
+/* int partition(int *arr, int low, int high)
 {
-    if (end > ini)
+    // pivot
+    int pivot = arr[high];
+
+    // Index of smaller element
+    int i = (low - 1);
+
+    for (int j = low; j <= high - 1; j++)
     {
-        int indexPivot = partition(v, ini, end);
-        quickSort(v, ini, indexPivot - 1);
+        // If current element is smaller
+        // than or equal to pivot
+        if (arr[j] <= pivot)
+        {
+
+            // increment index of
+            // smaller element
+            i++;
+            swap(arr, i, j);
+        }
+    }
+    swap(arr, i + 1, high);
+    return (i + 1);
+} */
+
+void quickSort(int *v, int beg, int end)
+{
+    //cout << end << endl;
+    if (end > beg)
+    {
+        int indexPivot = partition(v, beg, end);
+        quickSort(v, beg, indexPivot - 1);
         quickSort(v, indexPivot + 1, end);
     }
 }
@@ -46,13 +72,14 @@ void quickSort(int *v, int ini, int end)
     return pIndex;
 } */
 
-int partitionRandom(int *v, int beg, int end){
-    int random = beg + rand()%(end-beg);
-    //cout << "pivo: " << random << endl; 
+int partitionRandom(int *v, int beg, int end)
+{
+    int random = beg + rand() % (end - beg);
+    //cout << "pivo: " << random << endl;
 
     swap(v, random, end);
 
-    return partition(v, beg,end);
+    return partition(v, beg, end);
 }
 
 void quickSortRandom(int *v, int beg, int end)

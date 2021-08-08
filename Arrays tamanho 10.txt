@@ -1,0 +1,16 @@
+
+Media SSIP (tamanho 10): 2e-07
+Mediana SSIP (tamanho 10): 0
+Media BBS (tamanho 10): 1.66667e-07
+Mediana BBS (tamanho 10): 0
+Media IS (tamanho 10): 3.33333e-08
+Mediana IS (tamanho 10): 0
+Media MS (tamanho 10): 4e-07
+Mediana MS (tamanho 10): 0
+Media CS (tamanho 10): 3.66667e-07
+Mediana CS (tamanho 10): 0
+Media QS (tamanho 10): 4e-07
+Mediana QS (tamanho 10): 0
+Media QSR (tamanho 10): 5e-07
+Mediana QSR (tamanho 10): 5e-07
+
