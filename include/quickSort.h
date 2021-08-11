@@ -21,30 +21,6 @@ int partition(int *v, int beg, int end)
     return pIndex;
 }
 
-/* int partition(int *arr, int low, int high)
-{
-    // pivot
-    int pivot = arr[high];
-
-    // Index of smaller element
-    int i = (low - 1);
-
-    for (int j = low; j <= high - 1; j++)
-    {
-        // If current element is smaller
-        // than or equal to pivot
-        if (arr[j] <= pivot)
-        {
-
-            // increment index of
-            // smaller element
-            i++;
-            swap(arr, i, j);
-        }
-    }
-    swap(arr, i + 1, high);
-    return (i + 1);
-} */
 
 void quickSort(int *v, int beg, int end)
 {
@@ -57,20 +33,7 @@ void quickSort(int *v, int beg, int end)
     }
 }
 
-/* int partitionRandom(int *v, int beg, int end){
-    int pIndex = beg;
-    int pivot = v[beg + rand() % (end-beg)];
 
-    for(int i= beg; i<end; i++){
-        if(v[i] <= pivot)
-        {
-            swap(v, i, pIndex);
-            pIndex++;
-        }
-    }
-    swap(v,pIndex,end);
-    return pIndex;
-} */
 
 int partitionRandom(int *v, int beg, int end)
 {

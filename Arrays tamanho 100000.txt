@@ -46,3 +46,51 @@ Mediana QS (tamanho 100000): 0.216147
 Media QSR (tamanho 100000): 0.208329
 Mediana QSR (tamanho 100000): 0.213488
 
+Testes com array ordenado
+Media SSIP (tamanho 100000): 9.66798
+Mediana SSIP (tamanho 100000): 9.67113
+Media BBS (tamanho 100000): 0.000215333
+Mediana BBS (tamanho 100000): 0.000212
+Media IS (tamanho 100000): 0.000249367
+Mediana IS (tamanho 100000): 0.000247
+Media MS (tamanho 100000): 0.00884093
+Mediana MS (tamanho 100000): 0.008838
+Media CS (tamanho 100000): 0.00170417
+Mediana CS (tamanho 100000): 0.001698
+Media QS (tamanho 100000): 19.9108
+Mediana QS (tamanho 100000): 19.9302
+Media QSR (tamanho 100000): 0.00716177
+Mediana QSR (tamanho 100000): 0.007107
+
+Testes com array em ordem decrescente
+Media SSIP (tamanho 100000): 9.90235
+Mediana SSIP (tamanho 100000): 9.90417
+Media BBS (tamanho 100000): 26.1813
+Mediana BBS (tamanho 100000): 26.181
+Media IS (tamanho 100000): 8.39679
+Mediana IS (tamanho 100000): 8.35454
+Media MS (tamanho 100000): 0.00917173
+Mediana MS (tamanho 100000): 0.0091505
+Media CS (tamanho 100000): 0.00174153
+Mediana CS (tamanho 100000): 0.0017375
+Media QS (tamanho 100000): 12.6293
+Mediana QS (tamanho 100000): 12.6048
+Media QSR (tamanho 100000): 0.00774203
+Mediana QSR (tamanho 100000): 0.007743
+
+Testes com array aleatório
+Media SSIP (tamanho 100000): 9.56793
+Mediana SSIP (tamanho 100000): 9.53427
+Media BBS (tamanho 100000): 28.3411
+Mediana BBS (tamanho 100000): 28.3551
+Media IS (tamanho 100000): 4.14733
+Mediana IS (tamanho 100000): 4.14231
+Media MS (tamanho 100000): 0.01255
+Mediana MS (tamanho 100000): 0.0125485
+Media CS (tamanho 100000): 0.0013396
+Mediana CS (tamanho 100000): 0.0013385
+Media QS (tamanho 100000): 0.205253
+Mediana QS (tamanho 100000): 0.205708
+Media QSR (tamanho 100000): 0.207072
+Mediana QSR (tamanho 100000): 0.207064
+

@@ -6,7 +6,7 @@ void bubbleSort(int *v, int n)
     for (int sweep = 0; sweep < n - 1; sweep++)
     {
         bool swapped = false;
-        for (int i = 0; i < n - sweep; i++)
+        for (int i = 0; i < n - sweep - 1; i++)
         {
             if (v[i] > v[i + 1])
             {

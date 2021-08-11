@@ -46,3 +46,51 @@ Mediana QS (tamanho 1000): 6.95e-05
 Media QSR (tamanho 1000): 8.06667e-05
 Mediana QSR (tamanho 1000): 8.1e-05
 
+Testes com array ordenado
+Media SSIP (tamanho 1000): 0.000992733
+Mediana SSIP (tamanho 1000): 0.000979
+Media BBS (tamanho 1000): 2.3e-06
+Mediana BBS (tamanho 1000): 2e-06
+Media IS (tamanho 1000): 2.53333e-06
+Mediana IS (tamanho 1000): 3e-06
+Media MS (tamanho 1000): 5.96333e-05
+Mediana MS (tamanho 1000): 5.9e-05
+Media CS (tamanho 1000): 1.67667e-05
+Mediana CS (tamanho 1000): 1.6e-05
+Media QS (tamanho 1000): 0.0020644
+Mediana QS (tamanho 1000): 0.002012
+Media QSR (tamanho 1000): 6.52667e-05
+Mediana QSR (tamanho 1000): 6.45e-05
+
+Testes com array em ordem decrescente
+Media SSIP (tamanho 1000): 0.00101253
+Mediana SSIP (tamanho 1000): 0.001012
+Media BBS (tamanho 1000): 0.00258317
+Mediana BBS (tamanho 1000): 0.002583
+Media IS (tamanho 1000): 0.0008317
+Mediana IS (tamanho 1000): 0.000831
+Media MS (tamanho 1000): 6.27333e-05
+Mediana MS (tamanho 1000): 6.1e-05
+Media CS (tamanho 1000): 1.54333e-05
+Mediana CS (tamanho 1000): 1.5e-05
+Media QS (tamanho 1000): 0.0012685
+Mediana QS (tamanho 1000): 0.001264
+Media QSR (tamanho 1000): 5.57667e-05
+Mediana QSR (tamanho 1000): 5.5e-05
+
+Testes com array aleatório
+Media SSIP (tamanho 1000): 0.0010144
+Mediana SSIP (tamanho 1000): 0.0010135
+Media BBS (tamanho 1000): 0.00191563
+Mediana BBS (tamanho 1000): 0.001909
+Media IS (tamanho 1000): 0.000419733
+Mediana IS (tamanho 1000): 0.000419
+Media MS (tamanho 1000): 9.53667e-05
+Mediana MS (tamanho 1000): 9.4e-05
+Media CS (tamanho 1000): 1.34e-05
+Mediana CS (tamanho 1000): 1.3e-05
+Media QS (tamanho 1000): 7.12e-05
+Mediana QS (tamanho 1000): 7.1e-05
+Media QSR (tamanho 1000): 8.2e-05
+Mediana QSR (tamanho 1000): 8.15e-05
+
